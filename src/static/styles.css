@@ -2,26 +2,29 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #24303f;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.6)),
+    linear-gradient(135deg, #eef6ff 0%, #f7f3ea 100%);
 }
 
 header {
   text-align: center;
-  padding: 20px 0;
+  padding: 28px 24px;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #0f4c81 0%, #1f7a8c 100%);
   color: white;
-  border-radius: 5px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 76, 129, 0.18);
 }
 
 header h1 {
@@ -42,36 +45,120 @@ main {
 }
 
 section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(10px);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(36, 48, 63, 0.1);
   width: 100%;
   max-width: 500px;
+  border: 1px solid rgba(15, 76, 129, 0.08);
 }
 
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #1a237e;
+  border-bottom: 1px solid rgba(15, 76, 129, 0.15);
+  color: #0f4c81;
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid rgba(31, 122, 140, 0.16);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 100%);
+  box-shadow: 0 10px 24px rgba(31, 122, 140, 0.08);
+}
+
+.activity-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+  margin-bottom: 0;
+  color: #0f4c81;
+}
+
+.availability-pill {
+  background: #dff3f4;
+  color: #115e67;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.participants-section {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 76, 129, 0.12);
+}
+
+.participants-section h5 {
+  color: #115e67;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.participants-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 8px;
+  color: #31465b;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(223, 243, 244, 0.58);
+  border: 1px solid rgba(31, 122, 140, 0.12);
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.delete-participant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b8324b 0%, #d64550 100%);
+  box-shadow: 0 8px 16px rgba(184, 50, 75, 0.2);
+}
+
+.delete-participant-btn:hover {
+  box-shadow: 0 12px 20px rgba(184, 50, 75, 0.28);
+}
+
+.delete-participant-btn span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.participant-empty {
+  list-style: none;
+  font-style: italic;
+  color: #6c7b88;
 }
 
 .form-group {
@@ -88,24 +175,26 @@ section h3 {
 .form-group select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid rgba(15, 76, 129, 0.18);
+  border-radius: 10px;
   font-size: 16px;
 }
 
 button {
-  background-color: #1a237e;
+  background: linear-gradient(135deg, #0f4c81 0%, #1f7a8c 100%);
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 10px 18px rgba(15, 76, 129, 0.18);
 }
 
 button:hover {
-  background-color: #3949ab;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(15, 76, 129, 0.24);
 }
 
 .message {
@@ -140,5 +229,15 @@ footer {
   text-align: center;
   margin-top: 30px;
   padding: 20px;
-  color: #666;
+  color: #5d6975;
+}
+
+@media (max-width: 640px) {
+  .activity-card-header {
+    flex-direction: column;
+  }
+
+  .availability-pill {
+    white-space: normal;
+  }
 }
